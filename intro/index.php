@@ -1,7 +1,31 @@
 <?php 
 
-$nome = 'Mary';
+$nome = $_GET['name'];
 
-echo('Ciao, il mio nome è ' . $nome);
+$string = '<p>Ciao, mi chiamo ' . $nome . '</p>';
+
+$string2 = str_replace( [$nome] , '***', $string);
+
 
 ?>
+
+<h2>Frase originale: </h2>
+<?php 
+
+echo('<pre>');
+var_dump($string);
+echo('</pre>'); 
+
+?>
+
+<h2>Frase modificata: </h2>
+<?php 
+
+echo('<pre>');
+var_dump($string2); 
+echo('</pre>');
+
+?>
+
+
+
